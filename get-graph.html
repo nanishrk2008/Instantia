@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="InStream">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>InStream</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-material-datetimepicker.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/mdl-selectfield.min.css" media="screen,projection"/>
+    <!-- <link type="text/css" rel="stylesheet" href="css/queries.css"/> -->
+    <link type="text/css" rel="stylesheet" href="css/jquery-back-to-top.css"/>
+    <link type="text/css" rel="stylesheet" href="css/dialog-polyfill.css" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->  
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    
+    <div class="site-layout mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+
+        <header class="site-header mdl-layout__header mdl-color-text--grey-600 mdl-color--grey-300">
+            <div class="mdl-layout__header-row">
+                GRAPH
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="search">
+                        <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                    </div>
+                </div>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                    <li class="mdl-menu__item"><a href="about.html">About</a></li>
+                    <li class="mdl-menu__item"><a href="contact.html">Contact</a></li>
+                    <li class="mdl-menu__item"><a href="information.html">Legal information</a></li>
+                    <li class="mdl-menu__item"><i class="material-icons">highlight_off</i>Sign Out</li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="site-drawer mdl-layout__drawer mdl-color--blue-grey-50 mdl-color-text--blue-grey-50">
+            <header class="site-drawer-header">
+                <div class="logo-drawer"><a href="alerts.html"><img src="images/logo_instantia.png" /> InStream</a></div>
+                <span class="user-name">Andrea Amado de Cerqueira</span>
+                <div class="site-avatar-dropdown">
+                    <div class="mdl-layout-spacer"></div>
+                    <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                        <i class="material-icons" role="presentation">arrow_drop_down</i>
+                        <span class="visuallyhidden">Accounts</span>
+                    </button>
+                    <button class="mdl-button mdl-button--icon">
+                        <a href="profile.html"><img src="images/user.jpg" class="site-avatar"></a>
+                    </button>
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+                        <li class="mdl-menu__item"><a href="profile.html"><i class="material-icons">account_circle</i>Profile</a></li>
+                        <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+                        <li class="mdl-menu__item"><i class="material-icons">highlight_off</i>Sign Out</li>
+                    </ul>
+                </div>
+            </header>
+            <nav class="site-navigation mdl-navigation mdl-color--blue-grey-50">
+                <a class="mdl-navigation__link" href="index.html"><img src="images/icon_home.png">HOME</a>
+                <a class="mdl-navigation__link" href="buildings.html"><img src="images/icon_buildings.png">BUILDINGS</a>
+                <a class="mdl-navigation__link" href=""><img src="images/icon_pressure.png">PRESSURE</a>
+                <a class="mdl-navigation__link" href=""><img src="images/icon_volume.png">VOLUME</a>
+                <a class="mdl-navigation__link" href=""><img src="images/icon_temperature.png">TEMPERATURE</a>
+                <a class="mdl-navigation__link" href=""><img src="images/icon_turbidity.png">TURBIDITY</a>
+            </nav>
+        </div>
+        
+        <main class="site-mdl-layout-content mdl-layout__content mdl-color--grey-100">
+            <div class="mdl-grid site-content">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h5 class="title-color">Form to get Graphs</h5>
+                </div>
+                <div class="site-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                        <form class="mdl-cell mdl-cell--5-col">
+                            <h5>By Year/Month</h5>
+                            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:49%;">
+                                <select id="year" class="date mdl-selectfield__select">
+                                    <option value=""></option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                </select>
+                                <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+                                <label for="year" class="mdl-selectfield__label">Year</label>
+                            </div>
+                            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:49%;">
+                                <select id="month" class="date mdl-selectfield__select">
+                                    <option value=""></option>
+                                    <option value="1">Jan</option>
+                                    <option value="2">Feb</option>
+                                    <option value="3">Mar</option>
+                                    <option value="4">Apr</option>
+                                    <option value="5">May</option>
+                                    <option value="6">Jun</option>
+                                    <option value="7">Jul</option>
+                                    <option value="8">Aug</option>
+                                    <option value="9">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                                <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+                                <label for="month" class="mdl-selectfield__label">Month</label>
+                            </div>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Get Graph</button>
+                        </form>
+                        <div class="mdl-cell mdl-cell--2-col"></div>
+                        <form class="mdl-cell mdl-cell--5-col">
+                            <h5>By full date</h5>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:99%;">
+                                <input placeholder="Date" class="mdl-textfield__input" type="text" id="year_month_day">
+                            </div>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Get Graph</button>
+                        </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    
+    <!-- Google Material Design -->
+    <script type="text/javascript" src="js/material.js"></script>
+    <script type="text/javascript" src="js/mdl-selectfield.min.js"></script>
+    <script type="text/javascript" src="js/dialog-polyfill.js"></script>
+
+    <!-- Datepicker -->
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/bootstrap-material-datetimepicker.js"></script>
+
+    <!-- General -->
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+    <script type="text/javascript" src="js/jquery.back-to-top.js"></script>
+
+    <!-- Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Main Js -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
